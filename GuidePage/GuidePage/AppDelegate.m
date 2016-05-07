@@ -21,7 +21,7 @@
     [_window makeKeyAndVisible];
     
     //判断是不是第一次启动应用
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"nofirstLaunch"])
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"nofirstLaunch"])
     {//第一次启动应用
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"nofirstLaunch"];
         [self guideVC];
